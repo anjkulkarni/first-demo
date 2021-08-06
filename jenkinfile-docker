@@ -1,0 +1,15 @@
+pipeline {
+   agent any
+   stages {
+      stage('docker-version') {
+         steps {
+           sh 'sudo docker version'
+         }
+      }
+    stage('docker-hw') {
+         steps {
+            sh 'sudo docker run hello-world'
+         }
+      }  
+   }
+}
